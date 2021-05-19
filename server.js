@@ -7,14 +7,16 @@ const session = require('express-session');
 const passport = require('./config/ppConfig');
 const isLoggedIn = require('./middleware/isLoggedIn');
 const db = require('./models');
+const methode_override = require('method-override')
 
 const SECRET_SESSION = process.env.SECRET_SESSION;
 
 app.set('view engine', 'ejs');
+app.use(methode_override('_method'));
 
 app.use(require('morgan')('dev'));
+///to create string or array data type 
 app.use(express.urlencoded({ extended: false }));
-// app.use(express.urlencoded({extended: true}))
 app.use(express.static(__dirname + '/public'));
 app.use(layouts);
 
