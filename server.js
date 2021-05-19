@@ -6,6 +6,7 @@ const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require('./config/ppConfig');
 const isLoggedIn = require('./middleware/isLoggedIn');
+const db = require('./models');
 
 const SECRET_SESSION = process.env.SECRET_SESSION;
 
@@ -13,6 +14,7 @@ app.set('view engine', 'ejs');
 
 app.use(require('morgan')('dev'));
 app.use(express.urlencoded({ extended: false }));
+// app.use(express.urlencoded({extended: true}))
 app.use(express.static(__dirname + '/public'));
 app.use(layouts);
 
@@ -60,7 +62,17 @@ app.get('/profile', isLoggedIn, (req, res) => {
 });
 
 
+
+
+
+
+
+
 app.use('/auth', require('./controllers/auth'));
+app.use('/articles', require('./controllers/articles'));
+
+
+
 
 const PORT = process.env.PORT || 8000;
 const server = app.listen(PORT, () => {
