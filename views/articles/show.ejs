@@ -29,17 +29,37 @@
             <div class="card-text mb-2">
                 <%= article.description %>
             </div>
-            <form action="/articles/<%= article.id %>?_method=DELETE" method="POST">
-                <button type="submit" value="Delete">Delete Article</button>
-                <a href="/articles">All articles</a>
-            </form>
+            
             <a href="/articles">All articles</a>
+          
+
+
+            <form action="/articles/<%= article.id %>?_method=DELETE" method="POST">
+                <button type="submit" class="btn btn-danger">Delete Article</button>
+    
+            </form>
+         
         </div>
 
         <% } else {%>
      <h1>Go home</h1>
         <%}%>
 
+
+
+
+
+
+
+
+
 </body>
 
+
+
+
 </html>
+
+
+
+
