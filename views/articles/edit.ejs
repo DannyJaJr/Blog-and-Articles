@@ -1,13 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
 
-    
+
+
+
+
+
+
+    <div class="container">
+        <% articles.forEach(element=> { %>
+            <div class="card mt-4">
+                <div class="card-body">
+
+                    <h4 class="card-title">
+                        <%= element.title %>
+                    </h4>
+
+                    <p class="card-subtitle mb-2">
+                        <%= element.date %>
+                    </p>
+
+                    <div class="card-text mb-2">
+                        <%= element.description %>
+                    </div>
+
+                    <form method="POST" action="/articles">
+                        <input hidden type="text" name="name" value="<%= Articles.name %>">
+                        <button class="btn btn-primary" type="submit">Edit article</button>
+                    </form>
+
+
+                    <form method="POST" action="/articles/<%=dinoId%>/?_method=PUT">
+
+                        <h4 class="card-title">
+                            <%= element.title %>
+                        </h4>
+
+                        <p class="card-subtitle mb-2">
+                            <%= element.date %>
+                        </p>
+
+                        <div class="card-text mb-2">
+                            <%= element.description %>
+                        </div>
+
+
+
+                        <input type="submit">
+                    </form>
+
+
+                </div>
+
+
+
+
+
+            </div>
+
+            <% }) %>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
 </body>
+
 </html>

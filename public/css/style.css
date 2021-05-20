@@ -7,3 +7,13 @@ nav ul li {
 h1 {
   color: chartreuse;
 }
+
+
+body {
+  background-image: url("/public/css/dream.jpeg");
+ 
+}
+
+#container {
+  background-image: url("/public/css/coloursquare.jpeg");
+}

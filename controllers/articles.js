@@ -41,7 +41,7 @@ router.get('/:idx', async (req, res) => {
 
 
 // step 5 delete routr
-router.delete('/:idx', async (req, res)=>{ // const deleteArticle = await db.article.destroy({
+router.delete('/:idx', async (req, res) => { // const deleteArticle = await db.article.destroy({
     console.log("You are here")
     const deleteArticle = await db.article.destroy({
         where: {
@@ -56,6 +56,16 @@ router.delete('/:idx', async (req, res)=>{ // const deleteArticle = await db.art
 
 
 ////step 6 for edit 
+router.put('/:idx', async (req, res) => {
+    const EditArticle = await db.article.update({
+        weher: {
+            id: req.params.idx
+        }
+    })
+    console.log(EditArticle)
+    res.redirect('/articles')
+   
+})  
 
 
 
