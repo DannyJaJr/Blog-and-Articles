@@ -14,6 +14,8 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       models.user.hasMany(models.article)
+      models.user.hasMany(models.dream)
+      models.user.hasMany(models.journal)
     }
   };
   user.init({

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+
+  <style>
+      * {
+          margin:0;
+          padding:0;
+          box-sizing: border-box;
+          list-style: none;
+      }
+
+      .search{
+          position: absolute;
+          top: 20%;
+          left: 10%;
+      }
+.container-2{
+    position: absolute;
+    top: 50%;
+
+
+}
+
+
+
+  </style>
+
+
+
+</head>
+<body>
+<h1>Global news</h1>
+
+
+
+    <form action="/journal/search" method="GET" class="search">
+        <label for="">News</label>
+        <input type="text" name="search" class="input">
+        <input type="submit" value="searchNews">
+    </form>
+
+
+
+    <div class="container-2">
+<ul class="news-list">
+
+</ul>
+    </div>
+
+
+
+
+    
+</body>
+</html>

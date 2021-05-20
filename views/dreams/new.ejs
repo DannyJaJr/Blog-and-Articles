@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+
+
+
+
+    <a href="/articles/">All Articles</a>
+
+<span> </span>
+    <a href="/dreams/">Dreams</a>
+
+
+
+    <form action="/dreams" method="POST">
+        <div class="form-group">
+            <label for="category">category</label>
+            <input required type="text" id="category" name="category" class="form-control">
+        </div>
+        <br>
+        <div class="form-group mb-2">
+            <label for="date">Date</label>
+            <input required type="date" id="date" name="date">
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea required name="description" id="description" cols="30" rows="10" class="form-control"></textarea>
+
+        </div>
+        <br>
+        <input type="hidden" name="userId">
+
+        <button type="submit" class="btn btn-primary">Save Dream</button>
+        <a href="/dreams/new" class="btn btn-secondary">Cancel</a>
+
+
+
+
+
+
+
+</body>
+
+</html>

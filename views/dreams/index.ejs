@@ -15,16 +15,16 @@
 <body>
 
 
-    <!-- the render "articles" from the grabArticles on the article.js 
-will be display through the loop ejsEach -->
-    <a href="/articles/new" class="btn btn-primary">Make New Article</a>
+
+
+    <a href="/dreams/new" class="btn btn-primary">Dreams Journal</a>
     <div class="container">
-        <% articles.forEach(element=> { %>
+        <% dreams.forEach(element=> { %>
             <div class="card mt-4">
                 <div class="card-body">
 
                     <h4 class="card-title">
-                        <%= element.title %>
+                        <%= element.category %>
                     </h4>
 
                     <p class="card-subtitle mb-2">
@@ -37,22 +37,20 @@ will be display through the loop ejsEach -->
 
 
 
-                    <form action="/articles/<%= element.id %>?_method=DELETE" method="POST">
-                        <button type="submit" class="btn btn-danger">Delete Article</button>
+                    <form action="/dreams/<%= element.id %>?_method=DELETE" method="POST">
+                        <button type="submit" class="btn btn-danger">Delete Dream</button>
 
                     </form>
- 
+
 
 
                 </div>
-
 
 
             </div>
 
             <% }) %>
     </div>
-
 
 
 </body>
