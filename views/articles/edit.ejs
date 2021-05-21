@@ -13,69 +13,30 @@
 
 
 
+    <form action="/articles/edit?_method=PUT" Method="PUT">
 
 
 
-    <div class="container">
-        <% articles.forEach(element=> { %>
-            <div class="card mt-4">
-                <div class="card-body">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input required type="text" id="title" name="title" class="form-control">
+        </div>
+        <br>
+        <div class="form-group mb-2">
+            <label for="date">Date</label>
+            <input required type="text" id="date" name="date">
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea required name="description" id="description" cols="30" rows="10" class="form-control"></textarea>
 
-                    <h4 class="card-title">
-                        <%= element.title %>
-                    </h4>
+        </div>
+        <br>
+        <input type="hidden" name="userId">
 
-                    <p class="card-subtitle mb-2">
-                        <%= element.date %>
-                    </p>
+        <button type="submit" class="btn btn-primary">Save Article</button>
 
-                    <div class="card-text mb-2">
-                        <%= element.description %>
-                    </div>
-
-                    <form method="POST" action="/articles">
-                        <input hidden type="text" name="name" value="<%= Articles.name %>">
-                        <button class="btn btn-primary" type="submit">Edit article</button>
-                    </form>
-
-
-                    <form method="POST" action="/articles/<%=dinoId%>/?_method=PUT">
-
-                        <h4 class="card-title">
-                            <%= element.title %>
-                        </h4>
-
-                        <p class="card-subtitle mb-2">
-                            <%= element.date %>
-                        </p>
-
-                        <div class="card-text mb-2">
-                            <%= element.description %>
-                        </div>
-
-
-
-                        <input type="submit">
-                    </form>
-
-
-                </div>
-
-
-
-
-
-            </div>
-
-            <% }) %>
-    </div>
-
-
-
-
-
-
-
+    </form>
 
 
 

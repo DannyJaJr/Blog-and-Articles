@@ -25,19 +25,51 @@ router.get('/new', (req, res) => {
 
 
 
-// ///step 4 create the show.ejs route for diaplay abd deleting
+
+
+
+///step 4 create the show.ejs route for diaplay abd deleting
+// router.get('/:idx', async (req, res) => {
+//     console.log(req.params.idx)
+//     const grabArticle = await db.article.findOne({
+//         where: {
+//             id: req.params.idx
+//         }
+//     })
+//     // ({ limit: 10, order: '"updatedAt" DESC' })
+//     res.render('articles/show', { article: grabArticle });
+//     // if (grabArticle ==null) res.redirect("/")
+
+// })
+
+
+
+
+/////// to edit
 router.get('/:idx', async (req, res) => {
-    console.log(req.params.idx)
-    const grabArticle = await db.article.findOne({
+    res.render('articles', {articles: title})
+})
+
+
+router.put('/:idx', async (req, res) => {
+   
+    const editArticle = await db.article.update({
         where: {
             id: req.params.idx
         }
     })
-    // ({ limit: 10, order: '"updatedAt" DESC' })
-    res.render('articles/show', { article: grabArticle });
-    // if (grabArticle ==null) res.redirect("/")
+    console.log(editArticle)
 
+    res.redirect('articles')
 })
+
+
+router.get("/:id")
+
+
+
+
+
 
 
 // step 5 delete routr
@@ -64,7 +96,7 @@ router.delete('/:idx', async (req, res) => { // const deleteArticle = await db.a
 //     })
 //     console.log(EditArticle)
 //     res.redirect('/articles')
-   
+
 // })  
 
 

@@ -14,7 +14,7 @@
 
 <body>
 
-
+    <a href="/dreams/new" class="btn btn-primary">Save New Dreams</a>
     <!-- the render "articles" from the grabArticles on the article.js 
 will be display through the loop ejsEach -->
     <a href="/articles/new" class="btn btn-primary">Make New Article</a>
@@ -41,7 +41,15 @@ will be display through the loop ejsEach -->
                         <button type="submit" class="btn btn-danger">Delete Article</button>
 
                     </form>
- 
+
+                <br>
+
+                <form action="/articles/<%= element.id %>?_method=PUT" method="POST">
+                    <button type="submit" class="btn btn-danger">Edit Article</button>
+
+                </form>
+
+                
 
 
                 </div>

@@ -17,19 +17,19 @@
 
 
 
-    <a href="/dreams/new" class="btn btn-primary">Dreams Journal</a>
+    <a href="/dreams/new" class="btn btn-primary">Store New Dreaml</a>
     <div class="container">
         <% dreams.forEach(element=> { %>
             <div class="card mt-4">
                 <div class="card-body">
 
-                    <h4 class="card-title">
+                    <h4 class="card-text">
                         <%= element.category %>
                     </h4>
 
-                    <p class="card-subtitle mb-2">
+                    <div class="card-subtitle mb-2">
                         <%= element.date %>
-                    </p>
+                    </div>
 
                     <div class="card-text mb-2">
                         <%= element.description %>

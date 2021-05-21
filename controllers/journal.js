@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 const axios = require('axios');
 const { text } = require('express');
-// const passport = require('../config/ppConfig');
+const passport = require('../config/ppConfig');
 
 
 
@@ -35,32 +35,42 @@ const { text } = require('express');
 
 
 
-router.get('/new', (req, res)=> {
-    res.render('journal/new')
-});
+// router.get('/new', (req, res)=> {
+//     res.render('journal/new')
+// });
 
 
-router.get('/', async (req, res)=>{
-    //   const apiKey  = "45f83ad2f86c44d68541ee28cd465ddf"
-    // let topic = input.value;
-    // let topic= req.query.search
-    // let topic = req.query.body
+// router.get('/',  (req, res, next)=>{
+//     axios.get("https://official-joke-api.appspot.com/random_joke")
+//     .then((response)=> {
+//         //now we have the resposense
+//         console.log(response);
+//     })
+//     .catch((err) => {
+//         //iit must console.log here
+//         console.log(err)
+//     });
+//     res.render("post")
+//     //   const apiKey  = "45f83ad2f86c44d68541ee28cd465ddf"
+//     // let topic = input.value;
+//     // let topic= req.query.search
+//     // let topic = req.query.body
 
     
-    let url = "https://official-joke-api.appspot.com/random_joke"
-    const result = await axios.get(url)
-    console.log(result)
-    // const data = result.data.articles 
-    // const description = result.data.articles.description
-    // const title = result.data.articles.title
-    // console.log(data[0])
-    // res.send("we right here")
-    // res.render('/journal/index', {
-    //     title:text,
-    //     description: description
-    // })
-    // .catch((error) => res.status(400).render("404"));
-})
+//     let url = "https://official-joke-api.appspot.com/random_joke"
+//     const result = await axios.get(url)
+//     console.log(result)
+//     // const data = result.data.articles 
+//     // const description = result.data.articles.description
+//     // const title = result.data.articles.title
+//     // console.log(data[0])
+//     // res.send("we right here")
+//     // res.render('/journal/index', {
+//     //     title:text,
+//     //     description: description
+//     // })
+//     // .catch((error) => res.status(400).render("404"));
+// })
 
 // router.get('/', function(res, req){
 //     let url = "hl-joke-api.appspot.com/random_jokettps://officia"
