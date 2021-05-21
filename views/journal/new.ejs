@@ -9,8 +9,7 @@
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
-
+   
   <style>
       * {
           margin:0;
@@ -21,26 +20,54 @@
 
       .search{
           position: absolute;
-          top: 20%;
+          top: 45%;
           left: 10%;
       }
 .container-2{
     position: absolute;
-    top: 50%
+    top: 60%;
+    left: 5%;
+}
+
+
+h1{
+    color: rgb(5, 5, 116);
 }
 
 
   </style>
 </head>
 <body>
-<h1>Jokes</h1> 
+<h1>Jokes Corner</h1> 
 
 
-<a href="/journal/" class="btn btn-primary">Random Jokes</a>
 
-<p><%= randomJoke.data.setup %></p>
 
-<p><%= randomJoke.data.punchline %></p>
+
+
+    
+
+
+<a href="/articles/"  class="btn btn-secondary btn-lg mb-2">All Articles</a>
+<a href="/articles/new" class="btn btn-secondary btn-lg mb-2">Create article</a>
+<a href="/dreams/"   class="btn btn-secondary btn-lg mb-2" >Dream journal</a>
+
+
+
+<br>
+<br>
+<br>
+<a href="/journal/"  class="btn btn-primary btn-lg mb-4">Random Jokes</a>
+
+
+<br>
+
+<h1 class="search"><%= randomJoke.data.setup %></h1>
+
+<h1 class="container-2"><%= randomJoke.data.punchline %></h1>
+
+
+
 
 
 

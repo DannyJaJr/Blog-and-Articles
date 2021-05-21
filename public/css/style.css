@@ -8,17 +8,16 @@ h1 {
   color: chartreuse;
 }
 
-/* 
-body {
-  background-image: url("/public/css/dream.jpeg");
- 
+html {
+  
+  margin: auto;
 }
 
-#container {
-  background-image: url("/public/css/coloursquare.jpeg");
-} */
 
 
 body {
-  background-image: url("./public/css/dream.jpeg");
+
+  
+  background-image: url("./dream.jpeg");
 }
+
