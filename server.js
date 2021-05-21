@@ -72,10 +72,12 @@ app.get('/profile', isLoggedIn, (req, res) => {
 
 
 
-app.use('/journal', require('./controllers/journal'));
+// app.use('/journal', require('./controllers/journal'));
 app.use('/auth', require('./controllers/auth'));
 app.use('/articles', require('./controllers/articles'));
 app.use('/dreams', require('./controllers/dreams'));
+app.use('/journal', require('./controllers/journal'));
+
 
 
 

@@ -6,15 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+
 </head>
 
 <body>
 
 
+<h1   class="mb-4">Edit article</h1>
 
-
-    <form action="/articles/edit?_method=PUT" Method="PUT">
-
+    <form action="/edit<%= article.id %>?_method=PUT" Method="PUT">
 
 
         <div class="form-group">
@@ -35,10 +38,10 @@
         <input type="hidden" name="userId">
 
         <button type="submit" class="btn btn-primary">Save Article</button>
+        <a href="/articles/new" class="btn btn-secondary">Cancel</a>
+
 
     </form>
-
-
 
 
 </body>

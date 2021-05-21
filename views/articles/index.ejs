@@ -36,20 +36,23 @@ will be display through the loop ejsEach -->
                     </div>
 
 
-
                     <form action="/articles/<%= element.id %>?_method=DELETE" method="POST">
                         <button type="submit" class="btn btn-danger">Delete Article</button>
 
                     </form>
 
-                <br>
+                    <br>
+                    <form action="/articles/edit/<%= element.id %>?_method=PUT" method="POST">
+                        <input type="text" name="updateTitle">
+                        <input type="text"  name="updateDate">
+                        <input type="text" name="updateDescription">
+                        <button type="submit" class="btn btn-danger">Edit Article</button>
 
-                <form action="/articles/<%= element.id %>?_method=PUT" method="POST">
-                    <button type="submit" class="btn btn-danger">Edit Article</button>
 
-                </form>
 
-                
+                    </form>
+
+
 
 
                 </div>
