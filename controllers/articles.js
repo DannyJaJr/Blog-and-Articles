@@ -28,20 +28,7 @@ router.get('/new', (req, res) => {
 
 
 
-// /step 4 create the show.ejs route for diaplay abd deleting
-// router.get('/edit/:idx', async (req, res) => {
-//     // console.log(req.params.idx)
-//     // const grabArticle = await db.article.findOne({
-//     //     where: {
-//     //         id: req.params.idx
-//     //     }
-//     // })
-//     // // ({ limit: 10, order: '"updatedAt" DESC' })
-//     // res.render('articles/edit', { article: grabArticle });
-//     // // if (grabArticle ==null) res.redirect("/")
 
-  
-// })
 
 
 
@@ -63,33 +50,6 @@ router.put('/edit/:idx', async (req, res) => {
 })
 
 
-
-
-
-// // / to complete the update route from edit/idx
-// router.put('/:idx', async (req, res, next) => {
-//     req.article = new Article()
-//     next()
-// }), saveArticlesAndRedirect('new')
-
-
-// function saveArticlesAndRedirect(path) {
-//     return async (req, res) => {
-//         let article = req.article
-//         article.title = req.body.title
-//         article.date = req.body.date
-//         article.description = req.body.description
-
-
-
-//         // const { title, date, description } = req.body
-//         // console.log(title, date, description);
-//         const newArticle = await db.article.create({ title, date, description })
-//         console.log(newArticle);
-//         // /to redirect the result to articles page
-//         res.redirect(`articles/${path}`)
-//     }
-// }
 
 
 

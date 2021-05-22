@@ -8,10 +8,7 @@ h1 {
   color: chartreuse;
 }
 
-html {
-  
-  margin: auto;
-}
+
 
 
 
@@ -19,5 +16,14 @@ body {
 
   
   background-image: url("./dream.jpeg");
+  
 }
 
+
+
+form {
+  position: relative;
+  top: 30%;
+  left: 5%;
+  right: 30%;
+}

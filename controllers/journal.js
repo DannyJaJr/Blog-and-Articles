@@ -4,6 +4,7 @@ const router = express.Router();
 const axios = require('axios');
 const { text } = require('express');
 const passport = require('../config/ppConfig');
+const isLoggedIn = require('../middleware/isLoggedIn');
 
 
 
@@ -13,7 +14,7 @@ const passport = require('../config/ppConfig');
 
 
 
-router.get('/new', (req, res)=> {
+router.get('/new',(req, res)=> {
     res.render('journal/new')
 });
 
