@@ -20,54 +20,56 @@
     <a href="/journal/" class="btn btn-primary btn-lg mb-4">Jokes</a>
     <a href="/articles/new" class="btn btn-primary btn-lg mb-4">Make New Article</a>
 
-    <h1 class="mb-4">My articles list:</h1>
+
     <div class="container">
-        <% articles.forEach(element=> { %>
-            <div class="card mt-4">
-                <div class="card-body">
+        <h1 class="mb-4">My articles list:</h1>
+        <div class="container">
+            <% articles.forEach(element=> { %>
+                <div class="card mt-4">
+                    <div class="card-body">
 
-                    <h4 class="card-title">
-                        <%= element.title %>
-                    </h4>
+                        <h4 class="card-title">
+                            <%= element.title %>
+                        </h4>
 
-                    <p class="card-subtitle mb-2">
-                        <%= element.date %>
-                    </p>
+                        <p class="card-subtitle mb-2">
+                            <%= element.date %>
+                        </p>
 
-                    <div class="card-text mb-2">
-                        <%= element.description %>
+                        <div class="card-text mb-2">
+                            <%= element.description %>
+                        </div>
+
+
+                        <form action="/articles/<%= element.id %>?_method=DELETE" method="POST">
+                            <button type="submit" class="btn btn-danger">Delete Article</button>
+
+                        </form>
+
+                        <br>
+                        <form action="/articles/edit/<%= element.id %>?_method=PUT" method="POST">
+                            <input type="text" name="updateTitle">
+                            <input type="text" name="updateDate">
+                            <input type="text" name="updateDescription">
+                            <button type="submit" class="btn btn-danger">Edit Article</button>
+
+
+
+                        </form>
+
+
+
+
                     </div>
-
-
-                    <form action="/articles/<%= element.id %>?_method=DELETE" method="POST">
-                        <button type="submit" class="btn btn-danger">Delete Article</button>
-
-                    </form>
-
-                    <br>
-                    <form action="/articles/edit/<%= element.id %>?_method=PUT" method="POST">
-                        <input type="text" name="updateTitle">
-                        <input type="text"  name="updateDate">
-                        <input type="text" name="updateDescription">
-                        <button type="submit" class="btn btn-danger">Edit Article</button>
-
-
-
-                    </form>
-
 
 
 
                 </div>
 
+                <% }) %>
+        </div>
 
-
-            </div>
-
-            <% }) %>
     </div>
-
-
 
 </body>
 

@@ -15,47 +15,50 @@
 <body>
     <a href="/journal/" class="btn btn-secondary btn-lg mb-4">Jokes</a>
 
-    <a href="/articles/"  class="btn btn-secondary btn-lg mb-4" >All Articles</a>
+    <a href="/articles/" class="btn btn-secondary btn-lg mb-4">All Articles</a>
     <a href="/articles/new" class="btn btn-secondary btn-lg  mb-4">Create article</a>
 
 
-<br>
-    <a href="/dreams/new" class="btn btn-primary btn-lg mb-2">Save New Dream</a>
+
     <div class="container">
-        <% dreams.forEach(element=> { %>
-            <div class="card mt-4">
-                <div class="card-body">
 
-                    <h4 class="card-text">
-                        <%= element.category %>
-                    </h4>
+        <br>
+        <a href="/dreams/new" class="btn btn-primary btn-lg mb-2">Save New Dream</a>
+        <div class="container">
+            <% dreams.forEach(element=> { %>
+                <div class="card mt-4">
+                    <div class="card-body">
 
-                    <div class="card-subtitle mb-2">
-                        <%= element.date %>
+                        <h4 class="card-text">
+                            <%= element.category %>
+                        </h4>
+
+                        <div class="card-subtitle mb-2">
+                            <%= element.date %>
+                        </div>
+
+                        <div class="card-text mb-2">
+                            <%= element.description %>
+                        </div>
+
+
+
+                        <form action="/dreams/<%= element.id %>?_method=DELETE" method="POST">
+                            <button type="submit" class="btn btn-danger">Delete Dream</button>
+
+                        </form>
+
+
+
                     </div>
-
-                    <div class="card-text mb-2">
-                        <%= element.description %>
-                    </div>
-
-
-
-                    <form action="/dreams/<%= element.id %>?_method=DELETE" method="POST">
-                        <button type="submit" class="btn btn-danger">Delete Dream</button>
-
-                    </form>
-
 
 
                 </div>
 
+                <% }) %>
+        </div>
 
-            </div>
-
-            <% }) %>
     </div>
-
-
 </body>
 
 </html>

@@ -21,7 +21,7 @@ router.get('/new',(req, res)=> {
 router.get('/', function(req, res) {
     axios.get("https://official-joke-api.appspot.com/random_joke")
     .then(function (response) {
-        console.log(response)
+        // console.log(response)
         res.render('journal/new', {randomJoke: response})
     })
 })

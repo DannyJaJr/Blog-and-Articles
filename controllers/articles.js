@@ -27,11 +27,6 @@ router.get('/new', (req, res) => {
 
 
 
-
-
-
-
-
 router.put('/edit/:idx', async (req, res) => {
 
     const grabArticleToedit = await db.article.findOne({
@@ -48,13 +43,6 @@ router.put('/edit/:idx', async (req, res) => {
     res.redirect("/articles")
     
 })
-
-
-
-
-
-
-
 
 
 
@@ -78,11 +66,6 @@ router.delete('/:idx', async (req, res) => { // const deleteArticle = await db.a
 
 
 
-
-
-
-
-
 ////step 2
 router.post('/', async (req, res) => {
     //test data from req.body
@@ -93,13 +76,6 @@ router.post('/', async (req, res) => {
     // /to redirect the result to articles page
     res.redirect('/articles')
 })
-
-
-
-
-
-
-
 
 
 

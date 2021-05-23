@@ -22,6 +22,9 @@ router.get('/', async (req, res) => {
 
 
 
+
+
+
 ////step 1
 router.get('/new', (req, res) => {
     //to go render on the new.ejs page as the first display
@@ -62,17 +65,7 @@ router.post('/', async (req, res) => {
 
 
 
-
-
-
-
 module.exports = router;
-
-
-
-
-
-
 
 
 

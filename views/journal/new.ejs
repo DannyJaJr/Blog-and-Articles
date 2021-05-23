@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,64 +10,36 @@
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
 
-   
-  <style>
-      * {
-          margin:0;
-          padding:0;
-          box-sizing: border-box;
-          list-style: none;
-      }
 
-      .search{
-          position: absolute;
-          top: 45%;
-          left: 10%;
-      }
-.container-2{
-    position: absolute;
-    top: 60%;
-    left: 5%;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+        }
 
+        .search {
+            position: absolute;
+            top: 45%;
+            left: 10%;
+        }
 
-h1{
-    color: rgb(5, 5, 116);
-}
+        .container-2 {
+            position: absolute;
+            top: 60%;
+            left: 5%;
+        }
 
 
-
-
-  </style>
+        h1 {
+            color: rgb(9, 9, 43);
+        }
+    </style>
 </head>
+
 <body>
-<h1>Jokes Corner</h1> 
-
-
-
-
-
-
-    
-
-
-<a href="/articles/"  class="btn btn-secondary btn-lg mb-2">All Articles</a>
-<a href="/articles/new" class="btn btn-secondary btn-lg mb-2">Create article</a>
-<a href="/dreams/"   class="btn btn-secondary btn-lg mb-2" >Dream journal</a>
-
-
-
-<br>
-<br>
-<br>
-<a href="/journal/"  class="btn btn-primary btn-lg mb-4">Random Jokes</a>
-
-
-<br>
-
-<h1 class="search"><%= randomJoke.data.setup %></h1>
-
-<h1 class="container-2"><%= randomJoke.data.punchline %></h1>
+    <h1>Jokes Corner</h1>
 
 
 
@@ -74,6 +47,36 @@ h1{
 
 
 
-    
+
+
+    <a href="/articles/" class="btn btn-secondary btn-lg mb-2">All Articles</a>
+    <a href="/articles/new" class="btn btn-secondary btn-lg mb-2">Create article</a>
+    <a href="/dreams/" class="btn btn-secondary btn-lg mb-2">Dream journal</a>
+
+
+
+    <div class="container">
+        <br>
+        <a href="/journal/" class="btn btn-primary btn-lg mb-4">Random Jokes</a>
+
+
+        <br>
+
+        <h1 class="search  mt-4">
+            <%= randomJoke.data.setup %>
+        </h1>
+
+        <h1 class="container-2 mt-6">
+            <%= randomJoke.data.punchline %>
+        </h1>
+
+
+
+
+
+
+    </div>
+
 </body>
+
 </html>

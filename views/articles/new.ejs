@@ -16,39 +16,45 @@
 <body>
 
 
-  
-    <a href="/journal/"  class="btn btn-secondary btn-lg mb-2">Jokes</a>
 
-    <a href="/dreams/new"  class="btn btn-secondary btn-lg mb-2" >Save New Dream</a>
+    <a href="/journal/" class="btn btn-secondary btn-lg mb-2">Jokes</a>
+
+    <a href="/dreams/new" class="btn btn-secondary btn-lg mb-2">Save New Dream</a>
     <br>
     <br>
 
-    <a href="/articles/"  class="btn btn-primary btn-lg mb-4">All Articles</a>
-
-<h1>Create an article</h1>
-
-    <form action="/articles" method="POST">
-        <div class="form-group">
-            <label for="title">Title</label>
-            <input required type="text" id="title" name="title" class="form-control">
-        </div>
-        <br>
-        <div class="form-group mb-2">
-            <label for="date">Date</label>
-            <input required type="text" id="date" name="date">
-        </div>
-        <div class="form-group">
-            <label for="description">Description</label>
-            <textarea required name="description" id="description" cols="30" rows="10" class="form-control"></textarea>
-
-        </div>
-        <br>
-        <input type="hidden" name="userId">
-
-        <button type="submit" class="btn btn-primary">Save Article</button>
-        <a href="/articles/new" class="btn btn-secondary">Cancel</a>
+    <a href="/articles/" class="btn btn-primary btn-lg mb-4">All Articles</a>
 
 
+
+    <div class="container">
+        <h1>Create an article</h1>
+
+        <form action="/articles" method="POST">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input required type="text" id="title" name="title" class="form-control">
+            </div>
+            <br>
+            <div class="form-group mb-2">
+                <label for="date">Date</label>
+                <input required type="text" id="date" name="date">
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea required name="description" id="description" cols="30" rows="10"
+                    class="form-control"></textarea>
+
+            </div>
+            <br>
+            <input type="hidden" name="userId">
+
+            <button type="submit" class="btn btn-primary">Save Article</button>
+            <a href="/articles/new" class="btn btn-secondary">Cancel</a>
+
+
+        </form>
+    </div>
 
 
 

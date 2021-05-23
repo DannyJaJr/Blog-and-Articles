@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <style>
         *,
         *::after,
@@ -142,61 +144,64 @@
             height: 35%;
             background-color: black;
         }
+
+        h3 {
+            color: rgb(6, 82, 6);
+        }
+
+        h1 {
+            color: rgb(14, 6, 66);
+        }
     </style>
 </head>
 
 <body>
 
-    <a href="/journal/" class="btn btn-secondary btn-lg mb-4">Jokes Corner</a>
+
+    
+
+    <a href="/journal/" class="btn btn-primary btn-lg mb-4">Jokes Corner</a>
+
+    <h1>Welcome to your Profile</h1>
+    <h3>User: <%= name %>
+            </h>
+            <br>
+            <h3>Email: <%= email %>
+            </h3>
+            <div class="container">
 
 
 
 
-    <h3>Welcome to your Profile</h3>
+                <h1>It's article time</h1>
+                <div class="clock">
+                    <div class="hand hour" data-hour-hand></div>
+                    <div class="hand minute" data-minute-hand></div>
+                    <div class="hand second" data-second-hand></div>
+                    <div class="number number1">1</div>
+                    <div class="number number2">2</div>
+                    <div class="number number3">3</div>
+                    <div class="number number4">4</div>
+                    <div class="number number5">5</div>
+                    <div class="number number6">6</div>
+                    <div class="number number7">7</div>
+                    <div class="number number8">8</div>
+                    <div class="number number9">9</div>
+                    <div class="number number10">10</div>
+                    <div class="number number11">11</div>
+                    <div class="number number12">12</div>
 
-    <p>Id: <%= id %>
-    </p>
-    <p>Name: <%= name %>
-    </p>
-    <p>Email: <%= email %>
-    </p>
-
-
-    <h1>It's article time</h1>
-    <div class="clock">
-        <div class="hand hour" data-hour-hand></div>
-        <div class="hand minute" data-minute-hand></div>
-        <div class="hand second" data-second-hand></div>
-        <div class="number number1">1</div>
-        <div class="number number2">2</div>
-        <div class="number number3">3</div>
-        <div class="number number4">4</div>
-        <div class="number number5">5</div>
-        <div class="number number6">6</div>
-        <div class="number number7">7</div>
-        <div class="number number8">8</div>
-        <div class="number number9">9</div>
-        <div class="number number10">10</div>
-        <div class="number number11">11</div>
-        <div class="number number12">12</div>
-
-    </div>
+                </div>
 
 
-    <br>
-    <br>
+                <br>
+                <br>
 
-    <a href="/articles/new" class="btn btn-secondary btn-lg  mb-4">Create article</a>
+                <a href="/articles/new" class="btn btn-primary btn-lg  mb-4">Create article</a>
 
 
 
-    <a href="/dreams/new" class="btn btn-secondary btn-lg  mb-4">New Dream</a>
-
-
-
-
-
-
+                <a href="/dreams/new" class="btn btn-primary btn-lg  mb-4">New Dream</a>
 
 
 
@@ -204,37 +209,43 @@
 
 
 
-    <script>
-        setInterval(setClock, 1000)
-
-        const hourHand = document.querySelector('[data-hour-hand]')
-        const minuteHand = document.querySelector('[data-minute-hand]')
-        const secondHand = document.querySelector('[data-second-hand]')
+            </div>
 
 
 
 
-        function setClock() {
-            const currentDate = new Date();
-            const secondsRatio = currentDate.getSeconds() / 60;
-            const minutesRatio = (secondsRatio + currentDate.getMinutes()) / 60;
-            const hoursRatio = (minutesRatio + currentDate.getHours()) / 12;
 
-            setRatation(secondHand, secondsRatio);
-            setRatation(minuteHand, minutesRatio);
-            setRatation(hourHand, hoursRatio);
+            <script>
+                setInterval(setClock, 1000)
 
-        }
+                const hourHand = document.querySelector('[data-hour-hand]')
+                const minuteHand = document.querySelector('[data-minute-hand]')
+                const secondHand = document.querySelector('[data-second-hand]')
 
 
 
-        function setRatation(element, rotationRatio) {
-            element.style.setProperty('--rotation', rotationRatio * 360)
-        }
 
-        setClock()
+                function setClock() {
+                    const currentDate = new Date();
+                    const secondsRatio = currentDate.getSeconds() / 60;
+                    const minutesRatio = (secondsRatio + currentDate.getMinutes()) / 60;
+                    const hoursRatio = (minutesRatio + currentDate.getHours()) / 12;
 
-    </script>
+                    setRatation(secondHand, secondsRatio);
+                    setRatation(minuteHand, minutesRatio);
+                    setRatation(hourHand, hoursRatio);
+
+                }
+
+
+
+                function setRatation(element, rotationRatio) {
+                    element.style.setProperty('--rotation', rotationRatio * 360)
+                }
+
+                setClock()
+
+            </script>
 
 </body>
 
