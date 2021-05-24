@@ -14,11 +14,11 @@ const isLoggedIn = require('../middleware/isLoggedIn');
 
 
 
-router.get('/new',(req, res)=> {
+router.get('/new',isLoggedIn, (req, res)=> {
     res.render('journal/new')
 });
 
-router.get('/', function(req, res) {
+router.get('/', isLoggedIn, function(req, res) {
     axios.get("https://official-joke-api.appspot.com/random_joke")
     .then(function (response) {
         // console.log(response)
