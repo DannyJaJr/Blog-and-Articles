@@ -33,7 +33,7 @@ router.get('/new', isLoggedIn, (req, res) => {
 
 ///step 4
 router.delete('/:idx', isLoggedIn,async (req, res) => { // const deleteArticle = await db.article.destroy({
-    console.log("You are here")
+    // console.log("You are here")
     const deleteDream = await db.dream.destroy({
         where: {
             id: req.params.idx

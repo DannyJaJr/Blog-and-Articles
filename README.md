@@ -36,13 +36,18 @@ Log or signup with an email to access randoms joke, create an article, or make y
 ![alt img](./loggin.png)
 
 
+
 ## `6` Future considerations.
+Turn into an all in one tool with functions to:
+
 `1` Add images to articles.
 
-`2` A Post route and page for a live feed interaction portal, where all users could establish a direct connection for message or comment. 
+  `2` Bugs tracker with decks to update works or tickets, available to be view only by concerned users. 
 
 
-## `7` Put down your morning thoughts or have some good jokes.
+
+
+## `7` Now put down your morning thoughts or have some good jokes.
 ![alt img](./profile.png)
 
 
