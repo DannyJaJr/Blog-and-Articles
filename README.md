@@ -1,12 +1,14 @@
-#  `1`Blog Articles and Dream Journal
+#  `1`  Blog Articles and Dream Journal
 
 
 Article blog with some added tools such as a dream journal, clock, and random jokes to elevate the mood.
 
 
-## `2` Fork & Clone Project & Install Dependencies
- First thing to do is `fork` and `clone` or use the direct link: 
+
+## `2` Fork & Clone / Link access
+First thing to do is `fork` and `clone` or use the direct link access: 
 https://blog-articles-dreams.herokuapp.com/auth/login
+![alt img](./access.png)
 
 
 
@@ -22,10 +24,9 @@ https://blog-articles-dreams.herokuapp.com/auth/login
 * EJS Templating and EJS Layouts
 
 
-### User Model
- Wireframe for your app - (Lucidchart)
+### User Model and attributes
 
-![alt img](./ERCHART.png)
+![alt img](./ER2.png)
 
 
 
@@ -36,10 +37,9 @@ Log or signup with an email to access randoms joke, create an article, or make y
 
 
 
-## `5` Fork & Clone Project & Install Dependencies
-`1` The first thing that we are going to do is `fork` and `clone` or use the direct link access: 
-https://blog-articles-dreams.herokuapp.com/auth/login
-![alt img](./access.png)
+
+## `6` Put down your morning thoughts or have some good jokes.
+![alt img](./profile.png)
 
 
 
