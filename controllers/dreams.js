@@ -23,9 +23,6 @@ router.get('/',  isLoggedIn,  async (req, res) => {
 
 
 
-
-
-
 ////step 1
 router.get('/new', isLoggedIn, (req, res) => {
     //to go render on the new.ejs page as the first display
@@ -34,7 +31,7 @@ router.get('/new', isLoggedIn, (req, res) => {
 
 
 
-
+///step 4
 router.delete('/:idx', isLoggedIn,async (req, res) => { // const deleteArticle = await db.article.destroy({
     console.log("You are here")
     const deleteDream = await db.dream.destroy({

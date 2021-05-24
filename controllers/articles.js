@@ -21,7 +21,7 @@ router.get('/', isLoggedIn, async (req, res) => {
 
 })
 
-////step 1
+////step 1 link to home page of the model
 router.get('/new', isLoggedIn,(req, res) => {
     //to go render on the new.ejs page as the first display
     res.render('articles/new')
@@ -30,14 +30,15 @@ router.get('/new', isLoggedIn,(req, res) => {
 
 
 
-
+/// route to edit article
 router.put('/edit/:idx',isLoggedIn, async (req, res) => {
-
+     // grab one article from the database
     const grabArticleToedit = await db.article.findOne({
         where: {
             id: req.params.idx
         }
     })
+    //update the mew varibale created 
     const newUpdate = await grabArticleToedit.update({
         title: req.body.updateTitle,
         date: req.body.updateDate,
@@ -53,7 +54,7 @@ router.put('/edit/:idx',isLoggedIn, async (req, res) => {
 
 
 
-// step 5 delete routr
+// step 5 delete route
 router.delete('/:idx', isLoggedIn,async (req, res) => { // const deleteArticle = await db.article.destroy({
     console.log("You are here")
     const deleteArticle = await db.article.destroy({

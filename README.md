@@ -36,9 +36,13 @@ Log or signup with an email to access randoms joke, create an article, or make y
 ![alt img](./loggin.png)
 
 
+## `6` Future considerations.
+`1` Add images to articles.
+
+`2` A Post route and page for a live feed interaction portal, where all users could establish a direct connection for message or comment. 
 
 
-## `6` Put down your morning thoughts or have some good jokes.
+## `7` Put down your morning thoughts or have some good jokes.
 ![alt img](./profile.png)
 
 
